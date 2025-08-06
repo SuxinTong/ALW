@@ -14,7 +14,7 @@ ALW employs a three-module design: **Multi-scale Decomposition Module**, **Adapt
 
 Overview of the Adaptive Lookback Window Learning Module:
 
-<img src="figures/ALWLM.jpg" width="88%"/>
+<img src="figures/ALWLM.jpg" width="66%"/>
 
 ## Main Results
 
