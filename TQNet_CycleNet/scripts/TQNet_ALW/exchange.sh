@@ -81,6 +81,9 @@ python -u run.py \
 # for batch_size in 16 32 64 128 256
 # do
 
+# for dropout in 0.5 0.3
+# do
+  
 # for learning_rate in 0.005 0.003 0.001 0.0005 0.0003
 # do
 
@@ -101,8 +104,10 @@ python -u run.py \
 #       --red_len $red_len \
 #       --train_epochs $train_epochs \
 #       --patience 5 \
-#       --dropout 0.5 \
+#       --dropout $dropout \
 #       --itr 1 --batch_size $batch_size --learning_rate $learning_rate
+# done
+
 # done
 
 # done

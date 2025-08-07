@@ -71,7 +71,7 @@ python -u run.py \
   --pred_len 720 \
   --enc_in 7 \
   --cycle 96 \
-  --dropout 0.5 \
+  --dropout 0.3 \
   --train_epochs 5 \
   --patience 5 \
   --itr 1 --batch_size 32 --learning_rate 0.0003
@@ -80,6 +80,9 @@ python -u run.py \
 # do
 
 # for batch_size in 16 32 64 128 256
+# do
+
+# for dropout in 0.5 0.3
 # do
 
 # for learning_rate in 0.005 0.003 0.001 0.0005 0.0003
@@ -102,8 +105,10 @@ python -u run.py \
 #       --red_len $red_len \
 #       --train_epochs $train_epochs \
 #       --patience 5 \
-#       --dropout 0.5 \
+#       --dropout $dropout \
 #       --itr 1 --batch_size $batch_size --learning_rate $learning_rate
+# done
+
 # done
 
 # done

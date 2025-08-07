@@ -40,7 +40,7 @@ python -u run.py \
   --train_epochs 30 \
   --patience 5 \
   --use_pe 0 \
-  --itr 1 --batch_size 32 --learning_rate 0.005
+  --itr 1 --batch_size 32 --learning_rate 0.003
 
 python -u run.py \
   --is_training 1 \
