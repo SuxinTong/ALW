@@ -17,7 +17,6 @@ class Model(nn.Module):
 
         self.ALW = ALW(configs)
         self.use_norm = configs.use_norm
-        self.disturb = configs.disturb
 
         self.use_tq = True  # ablation parameter, default: True
         self.channel_aggre = True   # ablation parameter, default: True
