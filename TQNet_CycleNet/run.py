@@ -41,7 +41,9 @@ parser.add_argument('--use_revin', type=int, default=1, help='1: use revin or 0:
 parser.add_argument('--use_norm', type=int, default=True, help='use norm and denorm')
 parser.add_argument('--use_pe', type=int, default=True, help='use positional encoding')
 parser.add_argument('--red_len', type=int, default=256, help='length of the reduced input sequence')
+parser.add_argument('--wavelet', type=str, default='db6', help='Wavelet type: [db6, sym6, coif5, bior4.4, haar, ...]')
 parser.add_argument('--wavelet_levels',type=int, default=3, help='Wavelet decomposition layers, controlling the multi-scale granularity of time series decomposition, default to 3 layers')
+parser.add_argument('--pad_mode', type=str, default='symmetric', help='Padding type: [symmetric, reflect, zero, periodic]')
 
 # Formers
 parser.add_argument('--embed_type', type=int, default=0, help='0: default 1: value embedding + temporal embedding + positional embedding 2: value embedding + temporal embedding 3: value embedding + positional embedding 4: value embedding')
