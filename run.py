@@ -71,7 +71,9 @@ if __name__ == '__main__':
     parser.add_argument('--use_norm', type=int, default=True, help='use norm and denorm')
     parser.add_argument('--use_pe', type=int, default=True, help='use positional encoding')
     parser.add_argument('--red_len', type=int, default=256, help='length of the reduced input sequence')
+    parser.add_argument('--wavelet', type=str, default='db6', help='Wavelet type: [db6, sym6, coif5, bior4.4, haar, ...]')
     parser.add_argument('--wavelet_levels',type=int, default=3, help='Wavelet decomposition layers, controlling the multi-scale granularity of time series decomposition, default to 3 layers')
+    parser.add_argument('--pad_mode', type=str, default='symmetric', help='Padding type: [symmetric, reflect, zero, periodic]')
 
     # optimization
     parser.add_argument('--num_workers', type=int, default=0, help='data loader num workers')
