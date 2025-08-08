@@ -53,7 +53,7 @@ To train the **iTransformer+ALW** on **Weather dataset**, you can use the script
 ```
 sh scripts/Weather/iTransformer_ALW.sh
 ```
-**Note on Hyperparameters:** While we provide the best hyperparameter settings obtained on our equipment, optimal settings for lighter datasets like ETT or Exchange might differ across various devices. You can perform hyperparameter searches using the commented-out code blocks in our provided best settings to achieve optimal performance on your setup.
+**Note on Hyperparameters: While we provide the best hyperparameter settings obtained on our equipment, optimal settings for lighter datasets like ETT or Exchange might differ across various devices. You can perform hyperparameter searches using the commented-out code blocks in our provided best settings to achieve optimal performance on your setup.**
 
 
 ## Acknowledgement
