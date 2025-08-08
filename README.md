@@ -3,7 +3,7 @@
 This repo is the implementation for the paper: Efficiently Enhancing Long-term Series Forecasting via Adaptive Lookback with Wavelets.
 
 ## Introduction
-This paper addresses the critical challenge of long-term series forecasting, where conventional models relying on fixed-length lookback windows often struggle with the inherent dynamic dependencies and multi-scale characteristics of the data. As illustrated in the figure below, the optimal lookback window length indeed varies significantly across different models and datasets, highlighting the inherent limitations of such fixed-window strategies. We propose the **Adaptive Lookback Window (ALW)** framework, a wavelet transform-driven approach that dynamically determines optimal lookback window lengths by leveraging multi-scale characteristics and adaptive attention mechanisms. ALW, as an efficient plug-and-play technique, not only reduces the MSE of backbone models but also reduces hyperparameter tuning requirements and enables input feature dimensionality reduction, which curtails subsequent model computational costs.
+This paper addresses the critical challenge of long-term series forecasting, where conventional models relying on fixed-length lookback windows often struggle with the inherent dynamic dependencies and multi-scale characteristics of the data. As illustrated in the figure below, the optimal lookback window length indeed varies significantly across different models and datasets, highlighting the inherent limitations of such fixed-window strategies. We propose the **Adaptive Lookback Window (ALW)** framework, a wavelet transform-driven approach that dynamically determines optimal lookback window lengths by leveraging multi-scale characteristics and adaptive attention mechanisms. ALW, as an efficient plug-and-play technique, not only reduces the MSE of backbone models but also reduces hyperparameter tuning requirements and enables input feature dimensionality reduction, which reduces subsequent model computational costs.
 
 <img src="figures/different_length.jpg" width="88%"/>
 
@@ -12,13 +12,13 @@ ALW employs a three-module design: **Multi-scale Decomposition Module**, **Adapt
 
 ![image](figures/ALW.jpg)
 
-Overview of the Adaptive Lookback Window Learning Module:
+The core of this architecture is the **Adaptive Lookback Window Learning Module**, which operates in a differentiable, three-stage process. First, scale-specific attention computes channel-aggregated temporal importance scores, highlighting predictive historical patterns. Next, reverse information accumulation and a soft boundary learning mechanism (via Soft-argmax) derive continuous cutoff indices based on where information contribution saturates. Finally, a sigmoid-based soft mask smoothly truncates irrelevant history while preserving end-to-end trainability. This entire mechanism allows the model to adaptively retain only the most informative context for forecasting, as visualized in detail below.
 
-<img src="figures/ALWLM.jpg" width="66%"/>
+<img src="figures/ALWLM.jpg" width="88%"/>
 
 ## Main Results
 
-We integrated ALW as a plugin module into several backbone forecasting models to validate its effectiveness in enhancing performance and its capacity to replace the typical need for hyperparameter search for input length. Table 1 presents a comparative performance analysis between original backbones, configured with hyperparameter-searched input sequence lengths, and their ALW-enhanced versions, which utilized a fixed initial input length of 512. The results show that ALW consistently improved performance across eight datasets, achieving an average MSE reduction of 5.1\%. Model-specific average MSE reductions were 2.3\% for TQNet, 2.5\% for CycleNet, 2.9\% for iTransformer, 5.1\% for DLinear, and 12.8\% for Autoformer, highlighting ALW's broad applicability.
+We integrated ALW as a plugin module into several backbone forecasting models to validate its effectiveness and its ability to reduce the need for manual hyperparameter tuning of the input length. Table 1 presents a comparative performance analysis between original backbones using their optimal, hyperparameter-tuned input lengths, and their ALW-enhanced versions, which utilized a fixed initial input length of 512. The results show that ALW consistently improved performance across eight datasets, achieving an average MSE reduction of **5.1\%**. The average MSE reductions for each model were **2.3\%** for TQNet, **2.5\%** for CycleNet, **2.9\%** for iTransformer, **5.1\%** for DLinear, and **12.8\%** for Autoformer, highlighting ALW's broad applicability.
 
 ![image](figures/MainResults.jpg)
 
