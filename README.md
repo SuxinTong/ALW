@@ -14,7 +14,7 @@ ALW employs a three-module design: **Multi-scale Decomposition Module**, **Adapt
 
 The core of this architecture is the **Adaptive Lookback Window Learning Module**, which operates in a differentiable, three-stage process. First, scale-specific attention computes channel-aggregated temporal importance scores, highlighting predictive historical patterns. Next, reverse information accumulation and a soft boundary learning mechanism (via Soft-argmax) derive continuous cutoff indices based on where information contribution saturates. Finally, a sigmoid-based soft mask smoothly truncates irrelevant history while preserving end-to-end trainability. This entire mechanism allows the model to adaptively retain only the most informative context for forecasting, as visualized in detail below.
 
-<img src="figures/ALWLM.jpg" width="88%"/>
+<img src="figures/ALWLM.jpg" width="68%"/>
 
 ## Main Results
 
