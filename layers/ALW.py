@@ -137,7 +137,7 @@ class ALW(nn.Module):
             # Compute Attention Scores
             # - Calculates the importance of each time step through the product of Q and K,
             #   scaled by sqrt(L) to prevent large inner products and unstable gradients.
-            scores = torch.einsum("bcl,bcs->bls", Q_proj, K_proj) / (L ** 0.5)
+            scores = torch.einsum("bcl,bcs->bls", Q_proj, K_proj) / (C ** 0.5)
             # - Tanh maps scores to [-1, 1], quantifying the information contribution.
             # - Mean aggregation along the time dimension, expanded back to original shape.
             weighted = torch.tanh(scores).mean(dim=1, keepdim=True).expand(-1, C, -1)  # [B, C, L]
