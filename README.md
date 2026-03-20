@@ -16,12 +16,6 @@ The core of this architecture is the **Adaptive Lookback Window Learning Module*
 
 <img src="figures/ALWLM.jpg" width="68%"/>
 
-## Main Results
-
-We integrated ALW as a plugin module into several backbone forecasting models to validate its effectiveness and its ability to reduce the need for manual hyperparameter tuning of the input length. Table 1 presents a comparative performance analysis between original backbones using their optimal, hyperparameter-tuned input lengths, and their ALW-enhanced versions, which utilized a fixed initial input length of 512. The results show that ALW consistently improved performance across eight datasets, achieving an average MSE reduction of **5.1\%**. The average MSE reductions for each model were **2.3\%** for TQNet, **2.5\%** for CycleNet, **2.9\%** for iTransformer, **5.1\%** for DLinear, and **12.8\%** for Autoformer, highlighting ALW's broad applicability.
-
-![image](figures/MainResults.jpg)
-
 ## Getting Started
 
 ### Environment Requirements
