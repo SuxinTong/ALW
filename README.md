@@ -55,6 +55,21 @@ sh scripts/Weather/iTransformer_ALW.sh
 ```
 **Note on Hyperparameters: While we provide the best hyperparameter settings obtained on our equipment, optimal settings for lighter datasets like ETT or Exchange might differ across various devices. You can perform hyperparameter searches using the commented-out code blocks in our provided best settings to achieve optimal performance on your setup.**
 
+## Citation
+
+If you find this repo useful, please cite our paper.
+
+```
+@inproceedings{tong2026efficiently,
+  title={Efficiently Enhancing Long-term Series Forecasting via Adaptive Lookback with Wavelets},
+  author={Tong, Suxin and Yuan, Jingling},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={31},
+  pages={25966-25974},
+  year={2026}
+}
+```
 
 ## Acknowledgement
 
