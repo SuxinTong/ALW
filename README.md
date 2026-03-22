@@ -60,7 +60,7 @@ If you find this repo useful, please cite our paper.
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   volume={40},
   number={31},
-  pages={25966-25974},
+  pages={25966--25974},
   year={2026}
 }
 ```
